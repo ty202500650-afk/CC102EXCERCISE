@@ -39,6 +39,8 @@ vector<double> average(numStudent);
     average[i] = totalScore / numQuiz;
 
  }
+ 
+ // TABEL SECTION//
 
     cout << "\n\n=============================================\n";
     cout << "Student";
@@ -68,3 +70,4 @@ vector<double> average(numStudent);
 
     return 0;
 }
+
