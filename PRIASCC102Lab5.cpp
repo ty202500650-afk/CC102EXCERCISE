@@ -34,6 +34,7 @@ vector<int>total(numStudent);
 
      int input;
 
+     //Checks the input
      while(true){
      cout << "Day " << j + 1 << ": ";
      cin >> input;
@@ -54,7 +55,7 @@ vector<int>total(numStudent);
 
  }
 
-   //TABEL SECTION
+   //TABLE SECTION
     cout << "\n\n=======================================================================\n";
     cout << "Student";
 
@@ -67,17 +68,23 @@ vector<int>total(numStudent);
     cout << "\tRemarks";
     cout << "\n=======================================================================\n";
 
+
+    //OUTPUTS STUD NUM
     for(int i = 0; i < numStudent; i++){
      cout << i + 1;
 
+     //OUTPUTS NUMDAYS
      for(int j = 0; j < numDays; j++){
       cout << "\t" << attendance[i][j];
      }
 
      cout << "\t" << total[i];
 
+     //OUTPUTS PERCENTAGE
      cout << "\t" << percentage[i]<<"%";
 
+
+     //OUTPUTS REMARKS
      if(percentage[i] < 50){
 
         cout <<"\t\t DRP";
@@ -99,3 +106,4 @@ vector<int>total(numStudent);
 
     return 0;
 }
+
