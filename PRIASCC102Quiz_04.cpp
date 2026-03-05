@@ -7,7 +7,7 @@ int main(){
 int choice;
 int row, col, time;
 
-vector<vector<int>> layout(5, vector<int>(10));
+vector<vector<int>> layout(5, vector<int>(10,0));
 char letters[]={'A','B','C','D','E'};
 
 do{
@@ -105,7 +105,7 @@ cin>>col2;
 
 
 //checks input
-if(row>=0 && row<5 && col>=0 && col<10){
+if(row2>=0 && row2<5 && col2>=0 && col2<10){
     if(layout[row2-1][col2-1] == 0){
      cout<<"\nComputer unit is already available!";
      avail=false;
@@ -136,3 +136,4 @@ cout<<"\nSystem has been reset!";
 
 return 0;
 }
+
