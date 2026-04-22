@@ -1,0 +1,48 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    
+    ofstream outFile("color.txt");
+
+    if (!outFile) {
+        cout << "Error creating file!" << endl;
+        return 1;
+    }
+
+    outFile << "Red" << endl;
+    outFile << "Blue" << endl;
+    outFile << "Green" << endl;
+    outFile << "Yellow" << endl;
+    outFile << "Purple" << endl;
+
+    outFile.close();
+
+    ifstream inFile("color.txt");
+
+    if (!inFile) {
+        cout << "Error opening color.txt!" << endl;
+        return 1;
+    }
+    
+    ofstream copyFile("color_copy.txt");
+
+    if (!copyFile) {
+        cout << "Error creating copy file!" << endl;
+        return 1;
+    }
+
+    string line;
+
+    while (getline(inFile, line)) {
+        copyFile << line << endl;
+    }
+
+    inFile.close();
+    copyFile.close();
+
+    cout << "File copied successfully!" << endl;
+
+    return 0;
+}
